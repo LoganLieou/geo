@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout"
   },
   "keywords": [
     "geocoding"
   ],
   "author": "Logan Jackson",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoganLieou/geo"
+  },
   "description": "United States zip code geocoding.",
   "devDependencies": {
     "jest": "^29.7.0"

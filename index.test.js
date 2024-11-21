@@ -1,5 +1,8 @@
 const { fromZip } = require('./index')
 
-test ("working smoke", () => {
-    expect(fromZip('76020')).not.toBe(null)
+const test = require('node:test')
+const assert = require('node:assert')
+
+test ("working smoke", (t) => {
+    assert.notStrictEqual(fromZip('76020'), null)
 })
