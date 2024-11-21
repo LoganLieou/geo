@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js",
-    "cover": "node --test --experimental-test-coverage --test-reporter=junit --test-reporter-destination=report.xml"
+    "test": "jest --coverage"
   },
-  "keywords": ["geocoding"],
+  "keywords": [
+    "geocoding"
+  ],
   "author": "Logan Jackson",
   "license": "MIT",
-  "description": "United States zip code geocoding."
+  "description": "United States zip code geocoding.",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }

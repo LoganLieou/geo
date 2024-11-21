@@ -9,32 +9,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: Coverage report
+    strategy:
+      matrix:
+        node-version: [12.x, 13.x, 14.x, 15.x]
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 2
 
-      - name: Steup Node
-        uses: actions/setup-node@v4.1.0
+    - name: Set up Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
 
-      - name: Install Deps
-        run: npm install
+    - name: Install dependencies
+      run: npm install
 
-      - name: Link
-        run: npm link geo
+    - name: Run tests
+      run: npm run test
 
-      - name: Project Structure
-        run: ls -a
-        
-      - name: Test
-        run: npm run test
-
-      - name: Generate report
-        run: npm run cover
-        
-      - name: Code Coverage Summary
-        uses: irongut/CodeCoverageSummary@v1.3.0
-        with:
-          filename: report.xml
-          badge: true
-          format: markdown
-          output: both
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
