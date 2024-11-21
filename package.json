@@ -1,0 +1,13 @@
+{
+  "name": "geo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/script.js",
+    "cover": "node --test --experimental-test-coverage --test-reporter=junit --test-reporter-destination=report.xml"
+  },
+  "keywords": ["geocoding"],
+  "author": "Logan Jackson",
+  "license": "MIT",
+  "description": "United States zipcode geocoding api."
+}
