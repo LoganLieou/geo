@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage --reporters=jest-junit"
+    "test": "jest --coverage"
   },
   "keywords": [
     "geocoding"
@@ -12,7 +12,6 @@
   "license": "MIT",
   "description": "United States zip code geocoding.",
   "devDependencies": {
-    "jest": "^29.7.0",
-    "jest-junit": "^16.0.0"
+    "jest": "^29.7.0"
   }
 }
