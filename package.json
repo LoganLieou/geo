@@ -10,12 +10,12 @@
   ],
   "author": "Logan Jackson",
   "license": "MIT",
+  "publishConfig": {
+    "@loganlieou:registry": "https://npm.pkg.github.com"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LoganLieou/geo"
   },
-  "description": "United States zip code geocoding.",
-  "devDependencies": {
-    "jest": "^29.7.0"
-  }
+  "description": "United States zip code geocoding."
 }
