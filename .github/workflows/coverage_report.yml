@@ -19,8 +19,8 @@ jobs:
       - name: Install Deps
         run: npm install
         
-      - name: Link
-        run: npm link geo
+      - name: Test
+        run: npm run test
 
       - name: Generate report
         run: npm run cover
