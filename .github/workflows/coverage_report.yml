@@ -21,6 +21,9 @@ jobs:
 
       - name: Link
         run: npm link geo
+
+      - name: Project Structure
+        run: ls -a
         
       - name: Test
         run: npm run test
