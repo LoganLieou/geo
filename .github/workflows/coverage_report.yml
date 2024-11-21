@@ -15,7 +15,13 @@ jobs:
 
       - name: Steup Node
         uses: actions/setup-node@v4.1.0
+
+      - name: Install Deps
+        run: npm install
         
+      - name: Link
+        run: npm link geo
+
       - name: Generate report
         run: npm run cover
         
