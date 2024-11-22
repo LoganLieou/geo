@@ -17,12 +17,16 @@ function parseCsv(text) {
     return data
 }
 
-function fromZip(zip) {
+function readText() {
     var text = readFileSync("./static/uszips.csv", 'utf8')
     return text.replace(/"([^"]+)"/g, '$1')
+}
+
+function fromZip(zip) {
+    const text = readText()
     const obj = parseCsv(text)
     const item = obj.find(item => item.zip === zip)
     return [item.lat, item.lng]
 }
 
-module.exports = { fromZip }
+module.exports = { fromZip 
