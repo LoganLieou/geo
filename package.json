@@ -1,5 +1,5 @@
 {
-  "name": "@loganlieou/usa-zipcoder",
+  "name": "usa-zipcoder",
   "version": "1.0.1",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "author": "Logan Jackson",
   "license": "MIT",
   "publishConfig": {
-    "@loganlieou:registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "url": "https://github.com/LoganLieou/geo.git"
