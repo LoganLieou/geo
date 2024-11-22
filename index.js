@@ -1,4 +1,5 @@
 const { readFileSync } = require('node:fs')
+const path = require('node:path')
 
 function parseCsv(text) {
 		const rows = text.split('\n')
@@ -18,7 +19,7 @@ function parseCsv(text) {
 }
 
 function readText() {
-    var text = readFileSync("static/uszips.csv", 'utf8')
+    var text = readFileSync(path.join(__dirname, 'static', 'uszips.csv'), 'utf8')
     return text.replace(/"([^"]+)"/g, '$1')
 }
 
