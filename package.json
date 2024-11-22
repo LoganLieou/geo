@@ -1,5 +1,5 @@
 {
-  "name": "usa-zipcoder",
+  "name": "@loganlieou/usa-zipcoder",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -14,8 +14,7 @@
     "@loganlieou:registry": "https://npm.pkg.github.com"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LoganLieou/geo"
+    "url": "https://github.com/LoganLieou/geo.git"
   },
   "description": "United States zip code geocoding."
 }
