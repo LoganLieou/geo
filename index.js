@@ -18,7 +18,7 @@ function parseCsv(text) {
 }
 
 function readText() {
-    var text = readFileSync("./static/uszips.csv", 'utf8')
+    var text = readFileSync("static/uszips.csv", 'utf8')
     return text.replace(/"([^"]+)"/g, '$1')
 }
 
@@ -29,4 +29,4 @@ function fromZip(zip) {
     return [item.lat, item.lng]
 }
 
-module.exports = { fromZip 
+module.exports = { fromZip }
